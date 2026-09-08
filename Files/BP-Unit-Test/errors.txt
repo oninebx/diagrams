@@ -1,22 +1,9 @@
-  it.each`
-    queryType
-    ${'generalEnquiry'}
-    ${'existingPolicy'}
-    ${'missingPolicy'}
-    ${'claim'}
-    ${'quote'}
-    ${'cancellation'}
-  `(
-    'should render default thank you message when submitting $queryType form for pacific brands',
-    async ({ queryType }) => {
-      process.env.brand = 'fij';
-      renderComponent(<ContactUsThankYou />, { initialRoute: `/portal/contact/thankyou/${queryType}` });
-      expect(screen.getByText('contactUs.thankYouPageTitle')).toBeInTheDocument();
-      expect(screen.getByText('contactUs.submitConfirmationMessage')).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Back to Overview' })).toBeInTheDocument();
-    }
-  );
+ SyntaxError: Unexpected token 'export'
 
-ContactUsThankYou > should render default thank you message when submitting existingPolicy form for pacific brands
------
-TypeError: Invalid value used as weak map key
+      21 |     Register = 'cim.auth0.register',
+      22 |     Reset = 'cim.auth0.reset',
+    > 23 |     Logout = 'cim.auth0.logout'
+         |               ^
+      24 | }
+      25 |
+      26 | enum AuthLogMessages {
